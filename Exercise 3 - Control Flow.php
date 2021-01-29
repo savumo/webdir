@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Markus Savumo - Exercise3</title>
+    <!--Table (internal css) stylings:-->
+    <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    </style>
+</head>
+
+<!-- Beginning of the body section-->
+<body>
+
+<?php $title = "Control Flow";?>
+
+<header>
+<h1><?php print $title?></h1>
+</header>
+
+<!--Task 1-->
+<h2>1. Write a script that gets the current month and prints one of the following responses, depending on whether it's August or not:
+
+It's August, so it's still holiday.
+Not August, This is Month-name so i don't have any holidays
+
+You can use date(F) function to get the current month name</h2>
+
+<?php
+$d = date("F");
+
+echo "Not August, This is $d so i don't have any holidays";
+?>
+
+<!--Task 2-->
+<h2>2. Assign color red to a variable name $color and check to print one the following responses using if else statement: 
+
+The color is red. 
+
+The color is not red.</h2>
+
+<?php
+$color = "red";
+
+if ($color == "red"){
+echo "The color is red.";
+}
+else {
+  echo "The color is no red.";
+}
+?>
+
+<!--Task 3-->
+<h2>3. Write a program to grade students based on their total score for a subject.
+The grading scheme is: Excellent : >80 ;Great >70 & less than 80;Good >60 & less than 70; Pass >50 & less than 60 & Fail less than 50
+</h2>
+<p>This task 3 is only done/show in code and it does not print anything</p>
+<?php
+$g = "grade";
+
+if ($g == ">80")
+echo "Excellent";
+
+elseif ($g == ">70")
+echo "Great";
+
+elseif ($g == ">=70")
+echo "Good";
+
+elseif ($g == "<=60")
+echo "Pass";
+
+elseif ($g == "<50")
+echo "Fail";
+?>
+
+<!--Task 4-->
+<h2>4. Write a program to get inputs (age and name)
+from the user and based on their age, decide if he/she is eligible for voting. (18 or more than 18 years is eligible for voting.)</h2>
+<p>This task 4 is done by that user cant put inputs</p>
+
+<?php
+   $age = "29";
+   $name = "Markus";
+
+   if ($age >= "18")
+echo "You can vote!";
+
+ elseif ($age != "18")
+ echo "You can't vote!";
+?>
+
+<!--Task 5-->
+<h2>5. Use a looping statement to construct the following pattern: 
+
+12345678
+1234567
+123456
+12345
+1234
+123
+12
+1</h2>
+
+<?php
+for($a=8; $a>=1; $a--)
+{
+for($b=1; $b<=$a; $b++)
+{
+  echo $b;
+}
+  echo "</br>";
+}
+?>
+
+<!--Task 6-->
+<h2>6. Use While loop to print the following pattern: 
+*
+**
+***
+****
+*****
+******
+*******
+********
+</h2>
+
+<?php	
+for ($i=1; $i<=8; $i++)	
+{	 
+for($j=1;$j<=$i;$j++)	  
+{	  	
+echo "*";	 
+}	  	
+echo "<br/>";   	
+}  
+?>
+
+<!--Task 6-->
+<h2> </h2>
+<!-- End of body section-->
+</body>
+
+<!-- End of document-->
+</html>
